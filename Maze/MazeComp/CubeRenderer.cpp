@@ -1,6 +1,6 @@
 ﻿#include "pch.h"
 #include "CubeRenderer.h"
-
+///////////////////////////////////
 using namespace DirectX;
 using namespace Microsoft::WRL;
 using namespace Windows::Foundation;
