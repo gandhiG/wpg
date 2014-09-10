@@ -77,7 +77,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d11.lib;dxguid.lib;XAudio2.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
     </Link>
@@ -137,21 +137,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\wpg-master\Maze\MazeComp\Direct3DContentProvider.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\wpg-master\Maze\MazeComp\Direct3DInterop.h" />
     <ClInclude Include="Ball.h" />
     <ClInclude Include="BasicTimer.h" />
-    <ClInclude Include="Direct3DInterop.h" />
     <ClInclude Include="CubeRenderer.h" />
     <ClInclude Include="DirectXHelper.h" />
     <ClInclude Include="Direct3DBase.h" />
-    <ClInclude Include="Direct3DContentProvider.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\Downloads\wpg-master\Maze\MazeComp\Direct3DContentProvider.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Downloads\wpg-master\Maze\MazeComp\Direct3DInterop.cpp" />
     <ClCompile Include="Ball.cpp" />
-    <ClCompile Include="Direct3DInterop.cpp" />
     <ClCompile Include="CubeRenderer.cpp" />
     <ClCompile Include="Direct3DBase.cpp" />
-    <ClCompile Include="Direct3DContentProvider.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -165,6 +165,16 @@
       <ShaderType>Vertex</ShaderType>
       <ShaderModel>4.0_level_9_3</ShaderModel>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DirectXTK\DirectXTK_WindowsPhone8.vcxproj">
+      <Project>{e0b52ae7-e160-4d32-bf3f-910b785e5a8e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\maze\assets\ball.dds" />
+    <Image Include="..\maze\assets\enemy.dds" />
+    <Image Include="..\maze\assets\goal.dds" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />

@@ -5,19 +5,37 @@
     <FxCompile Include="SimpleVertexShader.hlsl" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Direct3DInterop.cpp" />
     <ClCompile Include="CubeRenderer.cpp" />
     <ClCompile Include="Direct3DBase.cpp" />
-    <ClCompile Include="Direct3DContentProvider.cpp" />
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Downloads\wpg-master\Maze\MazeComp\Direct3DContentProvider.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Downloads\wpg-master\Maze\MazeComp\Direct3DInterop.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicTimer.h" />
-    <ClInclude Include="Direct3DInterop.h" />
     <ClInclude Include="CubeRenderer.h" />
     <ClInclude Include="DirectXHelper.h" />
     <ClInclude Include="Direct3DBase.h" />
-    <ClInclude Include="Direct3DContentProvider.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\wpg-master\Maze\MazeComp\Direct3DContentProvider.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\wpg-master\Maze\MazeComp\Direct3DInterop.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{4fb74578-8ca8-4f1d-9ae9-8def78537008}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\maze\assets\ball.dds">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\maze\assets\enemy.dds">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\maze\assets\goal.dds">
+      <Filter>Assets</Filter>
+    </Image>
   </ItemGroup>
 </Project>
